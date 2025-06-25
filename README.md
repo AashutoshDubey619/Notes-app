@@ -1,6 +1,6 @@
 # 📝 Notes App
 
-A full-stack Notes application built with **HTML, CSS, JavaScript (Frontend)** and **Express.js + MongoDB (Backend)**. Users can add, view, and delete notes using a RESTful API.
+A full-stack Notes application built with **HTML, CSS, JavaScript (Frontend)** and **Express.js + MongoDB (Backend)**. Users can add, view,edit and delete notes using a RESTful API.
 
 ---
 
