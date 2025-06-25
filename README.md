@@ -22,7 +22,7 @@ A full-stack Notes application built with **HTML, CSS, JavaScript (Frontend)** a
 | Frontend     | HTML, CSS, JavaScript |
 | Backend      | Node.js, Express.js   |
 | Database     | MongoDB (with Mongoose) |
-| Hosting (Optional) | Render (Backend), Netlify (Frontend) |
+| Hosting      | Render (Backend), Netlify (Frontend) |
 
 ---
 
