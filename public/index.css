@@ -1,0 +1,113 @@
+body{
+  font-family: "Roboto Condensed", sans-serif;
+background: linear-gradient(to right, #ffecd2, #fcb69f);
+color: #4b3832;
+}   
+
+
+h1 {
+  font-size: 3.0rem;
+  font-weight: 900;
+  font-style: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+  margin-left: 30px;
+  text-align: center;
+}
+
+h2{
+  font-size: 2.0rem;
+  font-weight: 900;
+  font-style: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+  margin-left: 30px;
+  background: linear-gradient(to right, #ffffff, #f0f0f0);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+
+.headicons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30px;
+}
+
+
+
+.title{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.title .icons{
+  display: flex;
+  justify-content: space-evenly;
+   align-items: center;
+}
+
+.add{
+  margin-left: 80px;
+}
+
+img:hover{
+    transform:scale(1.1);
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#port{
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: black;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#port:hover{
+   transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.notes{
+    display: flex;
+  flex-wrap: wrap;           /* allow wrapping */
+  justify-content: center;   /* center all rows */
+  gap: 20px;                 /* spacing between notes */
+  padding: 20px;
+}
+
+
+.notebox {
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 
+                0 4px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: fit-content;
+  width: 300px;
+}
+.notebox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+
+.foot{
+  display: flex;
+  justify-content: space-around;
+}

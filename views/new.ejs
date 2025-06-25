@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Note</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/new.css" />
+</head>
+<body>
+        <form method="post" action="/notes">
+           <h1>New Note</h1>
+        <div class="title">
+            <input type="text" name="title" placeholder="Enter Title" />
+        </div>
+        <div class="content">
+            <textarea placeholder="Type note here" name="note" rows="8" cols="50"></textarea>
+        </div>
+        <button class="save">Save!</button>
+    </form>
+    
+</body>
+</html>

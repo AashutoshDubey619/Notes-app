@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    <h1>Keep Notes</h1>
+    <br>
+    <div class="headicons">
+      <form method="get" class="add">
+        <a href="/notes/new">
+    <img width="60" height="60" src="https://img.icons8.com/external-those-icons-fill-those-icons/96/external-Add-Note-notes-those-icons-fill-those-icons.png" alt="external-Add-Note-notes-those-icons-fill-those-icons"/>
+</a>
+    </form>
+      <form method="post" action="/notes?_method=DELETE"
+ style="display: inline;">
+  <button type="submit"  style="background: none; border: none; padding: 0; cursor: pointer;" id="delall">
+   <img width="65" height="65" src="https://img.icons8.com/color/96/delete-forever.png" alt="delete-forever"/>
+    </button>
+      </form>
+    </div>
+    <div class="notes">
+        <% for(let note of notes) { %>
+          <div class="notebox">
+            <div class="title">
+                <h2><%=note.title%></h2>
+                <div class="icons">
+                   <form method="get" action="/notes/<%=note._id%>/edit">
+                        <a href="/notes/<%=note._id%>/edit">
+                            <img width="40" height="40" src="https://img.icons8.com/sf-black-filled/64/create-new.png" alt="create-new"/>
+                       </a>
+                </form>
+               <form method="POST" action="/notes/<%= note._id %>?_method=DELETE" style="display: inline;">
+  <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+    <img
+      width="35"
+      height="35"
+      src="https://img.icons8.com/external-inkubators-glyph-inkubators/100/external-delete-ecommerce-user-interface-inkubators-glyph-inkubators-2.png"
+      alt="Delete"
+    />
+  </button>
+</form>
+
+                </div>
+            </div>
+              <div class="content">
+                 <p><%- note.note.replace(/\r?\n/g, "<br>") %></p>
+              </div>
+              <div class="time">
+                <p><%=note.created_at.getHours()%>:<%=note.created_at.getMinutes()%>:<%=note.created_at.getSeconds()%></p>
+                <p><%=note.created_at.getDate()%>-<%=note.created_at.getMonth()%>-<%=note.created_at.getFullYear()%></p>
+              </div>
+          </div>  
+          <% } %>
+    </div>
+ <footer>
+   <div class="foot">
+     <p>Made by Aashutosh Dubey</p>
+     <button id="port"><a href="https://portfolioakd20.netlify.app">My Portfolio</a></button>
+   </div>
+ </footer>
+</body>
+</html>
