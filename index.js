@@ -1,9 +1,15 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
 const Note = require("./model/note.js");
+
+
+
+const PORT = process.env.PORT || 8080;
+
 
 
 app.set("views" , path.join(__dirname , "views"));
@@ -113,8 +119,8 @@ app.get("/" , (req,res)=>{
 
 
 
-app.listen("8080" , ()=>{
-    console.log("Port Listening to 8080");
+app.listen(PORT , ()=>{
+    console.log(`Port Listening to ${PORT}`);
 });
 
 
