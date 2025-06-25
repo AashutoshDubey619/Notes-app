@@ -100,7 +100,20 @@ a{
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   height: fit-content;
   width: 300px;
+    word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 300px;
+  min-height: 200px;
 }
+
+.notebox p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+
+
 .notebox:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
