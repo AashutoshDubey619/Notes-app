@@ -1,15 +1,9 @@
-require('dotenv').config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
 const Note = require("./model/note.js");
-
-
-
-const PORT = process.env.PORT || 8080;
-
 
 
 app.set("views" , path.join(__dirname , "views"));
@@ -88,15 +82,11 @@ app.put("/notes/:id" , async (req,res)=>{
 
 // Delete all 
 
-app.delete("/notes", async (req, res) => {
-  console.log("✅ delall route HIT");
-  await Note.deleteMany({});
-  res.redirect("/notes");
+app.post("/notes/delall" ,async (req,res)=>{
+    console.log("delete all requestef !");
+    await Note.deleteMany({});
+     res.redirect("/notes");
 });
-
-
-
-
 
 // Delete
 
@@ -119,8 +109,8 @@ app.get("/" , (req,res)=>{
 
 
 
-app.listen(PORT , ()=>{
-    console.log(`Port Listening to ${PORT}`);
+app.listen("3000" , ()=>{
+    console.log("Port Listening to 3000");
 });
 
 
